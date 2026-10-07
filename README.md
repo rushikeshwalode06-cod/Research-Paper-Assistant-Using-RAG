@@ -513,6 +513,8 @@ Possible future improvements include:
 
 ---
 
+![ml](https://github.com/rushikeshwalode06-cod/Research-Paper-Assistant-Using-RAG/blob/main/R1.png?raw=true)
+
 ## 🏁 Conclusion
 
 ResearchMate AI demonstrates a practical implementation of a **Retrieval-Augmented Generation system for research-paper question answering**.
