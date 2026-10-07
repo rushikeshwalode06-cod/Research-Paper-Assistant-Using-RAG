@@ -3,7 +3,7 @@ ResearchMate AI is a RAG-based research paper assistant that lets users upload P
 
 # 📚 ResearchMate AI
 
-## Intelligent RAG-Based Research Paper Assistant
+## 🧠 Intelligent RAG-Based Research Paper Assistant
 
 ResearchMate AI is an intelligent **Retrieval-Augmented Generation (RAG)** based research paper assistant that allows users to upload research papers in PDF format and ask questions related to their documents.
 
@@ -65,7 +65,7 @@ AI Generated Answer
 
 ### Programming Language
 
-* Python
+* 🐍 Python
 
 ### Framework
 
@@ -226,9 +226,9 @@ Final Answer
 
 ---
 
-# ⚙️ How the Project Works
+## ⚙️ How the Project Works
 
-## 1. PDF Upload
+### 1. PDF Upload
 
 Users can upload one or multiple research papers in PDF format.
 
@@ -236,7 +236,7 @@ The application accepts multiple PDF files at the same time.
 
 ---
 
-## 2. PDF Text Extraction
+### 2. PDF Text Extraction
 
 The project uses `PdfReader` from `pypdf` to read the uploaded research papers.
 
@@ -246,7 +246,7 @@ The application also stores the document name and page number along with each ch
 
 ---
 
-## 3. Text Chunking
+### 3. Text Chunking
 
 Large documents are divided into smaller pieces before creating embeddings.
 
@@ -261,7 +261,7 @@ This allows the retrieval system to work with smaller and more meaningful sectio
 
 ---
 
-## 4. Embedding Generation
+### 4. Embedding Generation
 
 The extracted chunks are converted into embeddings using:
 
@@ -275,7 +275,7 @@ The generated embeddings are converted into NumPy arrays and prepared for vector
 
 ---
 
-## 5. FAISS Vector Database
+### 5. FAISS Vector Database
 
 The project uses FAISS for efficient vector similarity search.
 
@@ -283,7 +283,7 @@ The generated embeddings are added to the FAISS index.
 
 ---
 
-## 6. User Question
+### 6. User Question
 
 The user can enter a natural-language question related to the uploaded research paper.
 
@@ -303,7 +303,7 @@ What are the key results?
 
 ---
 
-## 7. Question Embedding
+### 7. Question Embedding
 
 The user's question is converted into an embedding using the same Sentence Transformer model.
 
@@ -311,7 +311,7 @@ This allows the system to compare the question with the document chunks.
 
 ---
 
-## 8. Semantic Search
+### 8. Semantic Search
 
 The system searches the FAISS vector database to retrieve the most relevant chunks.
 
@@ -319,7 +319,7 @@ The project retrieves up to **4 relevant chunks** for answering a question.
 
 ---
 
-## 9. Context Creation
+### 9. Context Creation
 
 The retrieved chunks are combined into a context containing:
 
@@ -331,7 +331,7 @@ This context is then passed to the language model.
 
 ---
 
-## 10. Prompt Engineering
+### 10. Prompt Engineering
 
 The project uses a controlled prompt instructing the model to answer using the retrieved context.
 
@@ -339,7 +339,7 @@ The system also provides a fallback response when the required information canno
 
 ---
 
-## 11. AI Answer Generation
+### 11. AI Answer Generation
 
 The FLAN-T5 model generates the final response from the retrieved context.
 
@@ -347,7 +347,7 @@ The generated output is decoded and displayed as the AI answer.
 
 ---
 
-# 📚 Source Tracking
+## 📚 Source Tracking
 
 ResearchMate AI provides source information for the retrieved content.
 
@@ -361,20 +361,20 @@ This helps users identify where the retrieved information came from.
 
 ---
 
-# 🔎 Retrieved Context
+## 🔎 Retrieved Context
 
 Users can expand the **View Retrieved Context** section to inspect the text chunks retrieved from the research paper.
 
 For each retrieved chunk, the application displays:
 
-* Document name
-* Page number
-* Similarity score
-* Retrieved text
+* 📄 Document name
+* 📑 Page number
+* 🎯 Similarity score
+* 📝 Retrieved text
 
 ---
 
-# 💬 Conversation History
+## 💬 Conversation History
 
 ResearchMate AI maintains questions and generated answers during the current Streamlit session.
 
@@ -382,64 +382,63 @@ The conversation history allows users to see previous questions and their corres
 
 ---
 
-# 📊 Knowledge Base
+## 📊 Knowledge Base
 
 After uploading research papers, the application maintains information about:
 
-* Uploaded documents
-* Text chunks
-* Vector count
-* Current knowledge base
+* 📄 Uploaded documents
+* 🧩 Text chunks
+* 🔢 Vector count
+* 📚 Current knowledge base
 
 The application displays these statistics through the dashboard.
 
 ---
 
-# 🎯 Project Objectives
+## 🎯 Project Objectives
 
 The main objectives of ResearchMate AI are:
 
-1. Simplify research-paper analysis.
-2. Allow users to ask questions directly from research papers.
-3. Retrieve semantically relevant information.
-4. Reduce the time required to manually search through papers.
-5. Generate concise answers from retrieved document context.
-6. Provide source and page information for retrieved content.
-7. Demonstrate a practical implementation of Retrieval-Augmented Generation.
-8. Provide an interactive AI-powered research assistant.
+* 🎯 Simplify research-paper analysis.
+* ❓ Allow users to ask questions directly from research papers.
+* 🔍 Retrieve semantically relevant information.
+* ⏱️ Reduce the time required to manually search through papers.
+* 🤖 Generate concise answers from retrieved document context.
+* 📑 Provide source and page information for retrieved content.
+* 🧠 Demonstrate a practical implementation of Retrieval-Augmented Generation.
+* 🚀 Provide an interactive AI-powered research assistant.
 
 ---
 
-# 🌟 Advantages
+## 🌟 Advantages
 
-* Easy to use
-* Supports multiple research papers
-* Semantic rather than simple keyword-based retrieval
-* Uses vector search
-* Source-aware responses
-* Shows retrieved context
-* Maintains conversation history
-* Interactive Streamlit interface
-* Useful for research and academic document analysis
-
+* 😊 Easy to use
+* 📚 Supports multiple research papers
+* 🔍 Semantic rather than simple keyword-based retrieval
+* ⚡ Uses vector search
+* 📑 Source-aware responses
+* 👀 Shows retrieved context
+* 💬 Maintains conversation history
+* 🎨 Interactive Streamlit interface
+* 🎓 Useful for research and academic document analysis
 ---
 
-# ⚠️ Limitations
+## ⚠️ Limitations
 
 The current implementation has some limitations:
 
-* The application works with PDF documents containing extractable text.
-* Scanned/image-only PDFs may not provide usable text without OCR.
-* The knowledge base is maintained in the current Streamlit session.
-* FAISS index data is not permanently stored on disk.
-* Answer quality depends on extracted text and retrieved chunks.
-* Very large documents may require additional optimization.
-* The current retrieval configuration uses up to four relevant chunks.
-* FLAN-T5 generation can require significant computational resources.
+* 📄 The application works with PDF documents containing extractable text.
+* 🖼️ Scanned/image-only PDFs may not provide usable text without OCR.
+* 💾 The knowledge base is maintained in the current Streamlit session.
+* 🗂️ FAISS index data is not permanently stored on disk.
+* 🎯 Answer quality depends on extracted text and retrieved chunks.
+* 📚 Very large documents may require additional optimization.
+* 🔍 The current retrieval configuration uses up to four relevant chunks.
+* 🖥️ FLAN-T5 generation can require significant computational resources.
 
 ---
 
-# 🔮 Future Improvements
+## 🔮 Future Improvements
 
 Possible future improvements include:
 
@@ -463,57 +462,57 @@ Possible future improvements include:
 
 ---
 
-# 🧠 Skills Demonstrated
+## 🧠 Skills Demonstrated
 
-* Python
-* Streamlit
-* Natural Language Processing
-* Retrieval-Augmented Generation
-* Large Language Models
-* Sentence Transformers
-* Text Embeddings
-* Vector Databases
-* FAISS
-* Semantic Search
-* Hugging Face Transformers
-* FLAN-T5
-* PyTorch
-* PDF Processing
-* Prompt Engineering
-* Context Retrieval
-* Generative AI
-* AI Application Development
+🐍 Python
+🎨 Streamlit
+📝 Natural Language Processing
+🔄 Retrieval-Augmented Generation
+🧠 Large Language Models
+🔤 Sentence Transformers
+📊 Text Embeddings
+🗄️ Vector Databases
+⚡ FAISS
+🔍 Semantic Search
+🤗 Hugging Face Transformers
+🤖 FLAN-T5
+🔥 PyTorch
+📄 PDF Processing
+✍️ Prompt Engineering
+📚 Context Retrieval
+✨ Generative AI
+🚀 AI Application Development
 
 ---
 
-# 🔑 Keywords
+## 🔑 Keywords
 
 ```text
-RAG
-Retrieval-Augmented Generation
-Generative AI
-NLP
-LLM
-FAISS
-Vector Database
-Semantic Search
-Sentence Transformers
-Embeddings
-FLAN-T5
-Hugging Face
-Transformers
-PyTorch
-Streamlit
-Python
-PDF Processing
-Prompt Engineering
-Artificial Intelligence
-Research Assistant
+🔹 RAG
+🔹 Retrieval-Augmented Generation
+🔹 Generative AI
+🔹 NLP
+🔹 LLM
+🔹 FAISS
+🔹 Vector Database
+🔹 Semantic Search
+🔹 Sentence Transformers
+🔹 Embeddings
+🔹 FLAN-T5
+🔹 Hugging Face
+🔹 Transformers
+🔹 PyTorch
+🔹 Streamlit
+🔹 Python
+🔹 PDF Processing
+🔹 Prompt Engineering
+🔹 Artificial Intelligence
+🔹 Research Assistant
 ```
 
 ---
 
-# 🏁 Conclusion
+## 🏁 Conclusion
 
 ResearchMate AI demonstrates a practical implementation of a **Retrieval-Augmented Generation system for research-paper question answering**.
 
@@ -525,36 +524,5 @@ Overall, ResearchMate AI demonstrates how modern **NLP, Generative AI, Vector Se
 
 ---
 
-# 🚀 Project Tagline
 
-```text
-ResearchMate AI — Read Less. Research Smarter. 🤖📚
-```
 
----
-
-## 🛠️ Built With
-
-```text
-Python
-Streamlit
-PyTorch
-Hugging Face Transformers
-Sentence Transformers
-FAISS
-pypdf
-NumPy
-HTML
-CSS
-```
-
----
-
-# ⭐ Project
-
-If you find this project useful, consider giving the repository a ⭐ on GitHub.
-
-```text
-ResearchMate AI
-Intelligent RAG-Based Research Paper Assistant
-```
