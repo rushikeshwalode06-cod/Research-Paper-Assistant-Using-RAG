@@ -526,6 +526,6 @@ Instead of manually searching through lengthy research papers, users can upload 
 Overall, ResearchMate AI demonstrates how modern **NLP, Generative AI, Vector Search, and RAG techniques** can be combined to build a useful real-world research assistant.
 
 ---
-
+![ml](https://github.com/rushikeshwalode06-cod/Research-Paper-Assistant-Using-RAG/blob/main/Re%20ppr.jpeg?raw=true)
 
 
