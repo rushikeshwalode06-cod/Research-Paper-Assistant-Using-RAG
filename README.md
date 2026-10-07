@@ -130,6 +130,7 @@ FLAN-T5 is responsible for generating the final answer from the context retrieve
 The model is loaded using Hugging Face Transformers.
 
 ---
+![ml](https://github.com/rushikeshwalode06-cod/Research-Paper-Assistant-Using-RAG/blob/main/Research%20ppr%20image.png?raw=true)
 
 ## 🔎 What is RAG?
 
